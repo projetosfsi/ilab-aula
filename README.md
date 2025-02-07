@@ -10,6 +10,13 @@ https://docs.instructlab.ai/
 
 ## Como Usar
 
+Crie um arquivo .env na raiz do projeto com o seu token do HuggingFace
+
+```
+HF_TOKEN=seu_token
+HUGGING_FACE_HUB_TOKEN=seu_token
+```
+
 Para buildar a imagem docker podemos usar
 
 ```
