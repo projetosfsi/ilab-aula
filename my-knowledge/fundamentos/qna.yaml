@@ -1,0 +1,87 @@
+---
+version: 3
+domain: technology
+created_by: andre_almeida
+seed_examples:
+  - context: |
+      **IA Comunidade PRO** é uma plataforma para aprendizado colaborativo em inteligência artificial, abrangendo tópicos como LLM, agentes, automação, análise de dados e SaaS.
+    questions_and_answers:
+      - question: |
+          O que é a IA Comunidade PRO?
+        answer: |
+          A IA Comunidade PRO é uma plataforma de aprendizado colaborativo em inteligência artificial que cobre tópicos como LLM, agentes, automação, análise de dados e SaaS.
+      - question: |
+          Quem fundou a IA Comunidade PRO?
+        answer: |
+          A IA Comunidade PRO foi fundada por Andre Almeida, fundador da Fabricando Sua Ideia.
+      - question: |
+          Qual é o principal objetivo da IA Comunidade PRO?
+        answer: |
+          Promover o aprendizado prático e avançado em inteligência artificial por meio de uma comunidade colaborativa.
+  - context: |
+      Andre Almeida, fundador da **IA Comunidade PRO**, possui mais de 20 anos de experiência em TI e é idealizador de projetos inovadores na área de inteligência artificial.
+    questions_and_answers:
+      - question: |
+          Quem é Andre Almeida?
+        answer: |
+          Andre Almeida é um programador com mais de 20 anos de experiência em TI, fundador da Fabricando Sua Ideia e idealizador da IA Comunidade PRO.
+      - question: |
+          Qual é o histórico profissional de Andre Almeida?
+        answer: |
+          Andre Almeida possui vasta experiência em TI, tendo trabalhado em diversos projetos de automação e inteligência artificial ao longo de duas décadas.
+      - question: |
+          Qual a contribuição de Andre Almeida para a comunidade?
+        answer: |
+          Ele trouxe sua experiência para criar um ambiente colaborativo que promove o aprendizado avançado e a aplicação prática de IA.
+  - context: |
+      Na **IA Comunidade PRO**, os membros aprendem sobre treinamento de modelos LLM, automação de processos e uso de dashboards para análise de dados em projetos reais.
+    questions_and_answers:
+      - question: |
+          Quais tópicos são ensinados na comunidade?
+        answer: |
+          Os tópicos incluem treinamento de modelos LLM, automação de processos, criação de dashboards e análise de dados.
+      - question: |
+          Quem pode participar da comunidade?
+        answer: |
+          Qualquer pessoa interessada em aprender e aplicar conceitos de IA, desde iniciantes até profissionais avançados.
+      - question: |
+          Como a comunidade ajuda no aprendizado?
+        answer: |
+          Por meio de tutoriais práticos, projetos colaborativos e suporte técnico para os membros.
+  - context: |
+      A **IA Comunidade PRO** oferece materiais exclusivos e tutoriais detalhados para ajudar os membros a dominar ferramentas modernas e metodologias de IA.
+    questions_and_answers:
+      - question: |
+          Quais são os benefícios de ser membro?
+        answer: |
+          Os benefícios incluem acesso a materiais exclusivos, tutoriais detalhados e suporte técnico para aprendizado prático.
+      - question: |
+          Como os tutoriais ajudam no aprendizado?
+        answer: |
+          Eles guiam os membros passo a passo no uso de ferramentas modernas e na aplicação de conceitos em projetos reais.
+      - question: |
+          Existe suporte técnico na comunidade?
+        answer: |
+          Sim, os membros têm acesso a suporte técnico para resolver dúvidas e superar desafios em seus projetos.
+  - context: |
+      A **IA Comunidade PRO** é voltada para capacitar profissionais em inteligência artificial, com foco na aplicação prática e em projetos reais.
+    questions_and_answers:
+      - question: |
+          Como a IA Comunidade PRO capacita seus membros?
+        answer: |
+          Por meio de aprendizado prático, suporte técnico e participação em projetos colaborativos.
+      - question: |
+          Que tipo de projetos são realizados na comunidade?
+        answer: |
+          Projetos reais que envolvem automação, criação de dashboards, treinamento de modelos LLM e mais.
+      - question: |
+          Qual o diferencial da IA Comunidade PRO?
+        answer: |
+          O foco na aplicação prática e no aprendizado colaborativo, capacitando os membros para resolver desafios do mundo real.
+document_outline: |
+  Detalhes sobre a IA Comunidade PRO, sua fundação, objetivos e tópicos abordados, com ênfase na aplicação prática e no aprendizado colaborativo.
+document:
+  repo: https://github.com/projetosfsi/ilab-aula
+  commit: e82058c31ab92a48ae15cd36b55792ed95278a7d
+  patterns:
+    - fundamentos_ia_comunidade_pro.md

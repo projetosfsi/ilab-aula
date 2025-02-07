@@ -1,0 +1,28 @@
+services:
+  textgen_webui:
+    image: atinoda/text-generation-webui:default-nvidia
+    container_name: textgen_webui
+
+    ports:
+      - "7860:7860"
+
+    volumes:
+      # Monte a pasta `hf_format`, que contém a subpasta samples_44, em /usr/src/app/models
+      - ./volumes/checkpoints/hf_format:/app/models
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: "nvidia"
+              capabilities: ["gpu"]
+
+    environment:
+      # Agora que existe de fato a subpasta samples_44 em /usr/src/app/models,
+      # podemos chamar `--model samples_44`
+      EXTRA_LAUNCH_ARGS: "--model samples_880 --listen --verbose"
+
+    shm_size: "2g"
+    ulimits:
+      memlock: -1
+      stack: 67108864

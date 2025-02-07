@@ -1,0 +1,31 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: instructlab
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - ./volumes/taxonomy:/root/.local/share/instructlab/taxonomy
+      - ./volumes/models:/root/.cache/instructlab/models
+      - ./volumes/checkpoints:/root/.local/share/instructlab/checkpoints
+      - ./volumes/datasets:/root/.local/share/instructlab/datasets
+
+    working_dir: /workspace
+    stdin_open: true  # Mantém o terminal aberto para interatividade
+    tty: true         # Necessário para o bash interativo
+    env_file:
+      - .env  # <-- Adicionando o arquivo .env aqui
+    environment:
+    # Testada Variavel para allocar memoria CUDA com Split, nao funcionou, o erro :
+    # torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 388.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 0 bytes is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. Of the allocated memory 37.87 GiB is allocated by PyTorch, and 102.37 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+    # Persistiu
+      #- PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:128
+      - NVIDIA_VISIBLE_DEVICES=all
